@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+	<title>个人中心</title>
+	<link rel="stylesheet" href="../src/assents/css/babelLoading.css">
+	<style>
+		@font-face {
+		    font-family: 'Time'; 
+		    src: url('../src/assents/font/DS-DIGIB.TTF');
+		} 
+	</style>
+</head>
+<body style="padding:0;margin:0">
+
+	<!-- 加载loading start -->
+	<div class="loader">
+        <div class="ball-clip-rotate-multiple">
+          <div></div>
+          <div></div>
+        </div>
+    </div>
+    <!-- 加载loading end -->
+
+	<div id="app"></div>
+</body>
+	<script>
+		window.onload = function(){
+			var load = document.querySelector('.loader');
+			load.style.opacity = 0;
+			load.style.zIndex = -1;
+		}
+	</script>
+	<script src="../src/assents/js/vue.min.js"></script>
+	<script src="../src/assents/js/zepto.min.js"></script>
+	<script src="../build/vuer.common.js"></script>
+	<script src="../build/openPrize.js"></script>
+</html>

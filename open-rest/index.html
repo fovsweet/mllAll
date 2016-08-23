@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户分析</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="common/css/common.css">
+</head>
+<style type="text/css">
+	.nav_content{
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.nav_content .item{
+		display:flex;
+		width:270px;
+		margin:0 50px 30px 0;
+	}
+	.item .item_list{
+		margin-left:20px;
+		width:170px
+	}
+	.item img,.item .add_icon{
+		width:80px;
+		height:80px;
+		background-color:#82b9ef;
+		border:none;
+		border-radius:5px;
+		box-sizing:border-box;
+	}
+	.item .add_icon{
+		border:2px solid #ddd;
+		background:transparent;
+		position:relative;
+	}
+	.item .add_icon:after{
+		content:'';
+		position:absolute;
+		width:34px;
+		height:2px;
+		background:#ddd;
+	    top: 38px;
+		left: 22px;
+	}
+	.item .add_icon:before{
+		content:'';
+		position:absolute;
+		width:2px;
+		height:34px;
+		background:#ddd;
+	    top: 22px;
+		left: 38px;
+	}
+	.item h2{
+		font-size:14px;
+		font-weight:normal;
+		color:#666;
+		line-height:1;
+		padding:10px 0 15px 0;
+	}
+	.item span{
+		color:#999;
+	    line-height: 1.3;
+    	display: inline-block;
+	}
+</style>
+<body>
+<div id="header">
+    <div class="logo">
+        <a href="javascript:;">
+            <img class="logo-img" src="common/images/logo_icon.png">
+        </a>
+    </div>
+    <ul class="first-nav" id="topBar">
+        <li><a href="#" class="current"><span class="nav-icon first-nav-in"></span><span>首页</span></a></li>
+        <li><a href="#"><span class="nav-icon first-nav-op"></span><span>开发者</span></a></li>
+    </ul>
+    <ul class="quit-nav">
+        <li>
+            <a href="logout">
+                <span class="quit-icon quit-ico"></span>
+                <span>退出</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="setting-nav" id="sysBar">
+        <li><a href="#"><span class="setting-icon setting-ico-sys"></span><span>运营平台</span></a></li>
+    </ul>
+</div>
+<div id='content'>
+	<div id='section'>
+		<div class="container">
+			<h3 class="page_header">应用</h3>
+			<div class="nav_content">
+				<div class="item">
+					<img src="images/card.png">
+					<div class="item_list">
+						<h2>卡券核销</h2>
+						<span>用于美乐乐公司的卡券核对</span>
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/redbag.png">
+					<div class="item_list">
+						<h2>晒单红包</h2>
+						<span>用户购物后可以领取晒单红包，朋友圈装逼神器</span>
+					</div>
+				</div>
+				<div class="item">
+					<img src="">
+					<div class="item_list">
+						<h2>应用名称</h2>
+						<span>应用简介</span>
+					</div>
+				</div>
+				<div class="item">
+					<img src="">
+					<div class="item_list">
+						<h2>应用名称</h2>
+						<span>应用简介</span>
+					</div>
+				</div>
+				<div class="item">
+					<img src="">
+					<div class="item_list">
+						<h2>应用名称</h2>
+						<span>应用简介</span>
+					</div>
+				</div>
+				<div class="item">
+					<a class="add_icon" href="javascript:;"></a>
+					<div class="item_list">
+						<h2>创建应用</h2>
+						<span>点击创建应用</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src='common/js/jquery-1.11.3.js'></script>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户分析</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="common/css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.ui.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.Jcrop.css">
+	<link rel="stylesheet" type="text/css" href="css/lightBox.css">
+</head>
+<style type="text/css">
+	.form-table{
+		margin-top:20px;
+	}
+	.search-group input.wd340{width:340px}
+	.update-group {
+	    display: inline-block;
+	    vertical-align: top;
+	    margin-left:10px
+	}
+	.file .add_logo {
+	    background: url("images/add_logo.png") no-repeat 50%;
+	    display: inline-block;
+	    width: 16px;
+	    height: 16px;
+	    position: relative;
+	    top: 3px;
+	    right: 5px;
+	}
+	.cover-group .update-group .file {
+	    line-height: 124px;
+	}
+	.update-group .file {
+	    position: relative;
+	    display: inline-block;
+	    width: 137.5px;
+	    height: 110px;
+	    line-height: 127px;
+	    color: #999;
+	    text-align: center;
+	    background: transparent;
+	    border-radius: 2px;
+	    border: 1px dashed #dddddd;
+	    overflow: hidden;
+	    font-size:14px
+	}
+	.js-upshow img {
+	    max-width: 100%;
+	    height: 100%;
+	    max-height: 100%;
+	    width: 100%;
+	}
+	.file img {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    max-width: 100%;
+	    max-height: 100%;
+	}
+	.data-dia{
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    top: 0px;
+	}
+	.imgup-block {
+	    float: left;
+	}
+	.imgup-block2 {
+	    margin-left: 28px;
+	}
+	.imgup-block2 .img-fi-preview {
+	    border: solid 1px #ddd;
+	    border-radius: 2px;
+	    position: relative;
+	}
+	.data-dia .dia-main .label {
+	    display: block;
+	    margin-top: 10px;
+	    text-align: center;
+	}
+	.imgup-block .img-drag-container {
+	    margin-left: -1px;
+	    border: dotted 1px #ddd;
+	    background-color: #fff;
+	}
+	.imgup-block .img-drag-container .p1 {
+	    margin-top: 44%;
+	    color: #808080;
+	    text-align: center;
+	    border-bottom: none;
+	    padding-top: 0;
+	    padding-bottom: 0;
+	}
+</style>
+<body>
+<div id="header">
+    <div class="logo">
+        <a href="javascript:;">
+            <img class="logo-img" src="common/images/logo_icon.png">
+        </a>
+    </div>
+    <ul class="first-nav" id="topBar">
+        <li><a href="#"><span class="nav-icon first-nav-in"></span><span>首页</span></a></li>
+        <li><a href="#" class="current"><span class="nav-icon first-nav-op"></span><span>开发者</span></a></li>
+    </ul>
+    <ul class="quit-nav">
+        <li>
+            <a href="logout">
+                <span class="quit-icon quit-ico"></span>
+                <span>退出</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="setting-nav" id="sysBar">
+        <li><a href="#"><span class="setting-icon setting-ico-sys"></span><span>运营平台</span></a></li>
+    </ul>
+</div>
+<div id='content'>
+	<div id='section'>
+		<div class="container">
+			<div class="tab">
+				<a class="active" href="javascript:;">应用管理</a>
+			</div>
+			<table class="form-table">
+				<tr>
+					<td>
+						<div class="search-group">
+							<em class="must-point">*</em>
+							<label>应用图标</label>
+							<div class="update-group" id="SmallImg">
+			                    <a onclick="upImgBox({boxWidth:530,maxWidth:280,maxHeight:280,minWidth:210,minHeight:210,tipWidth:200,tipHeight:200},'ccPicBigImg');" href="javascript:;" class="js-upshow file" case="smallImg" data-role="upImgs" style="width: 127px;height: 127px;">
+			                      <input type="hidden" name="raPicSmallUrl" id="raPicSmallUrl" value="">
+			                      <i class="add_logo"></i> 上传图片
+			                      <img id="ImgSmallUrl" title="" src="">
+			                    </a>
+			                    <p style="color:#999;line-height: 1; margin-top: 5px;font-size:14px">建议尺寸200X200</p>
+		                	</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="search-group">
+							<em class="must-point">*</em>
+							<label>应用名称</label>
+							<input class="wd340" type="text" name="">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="search-group">
+							<label>应用简介</label>
+							<input type="text" name="">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="search-group">
+							<label>回调地址</label>
+							<input class="wd340" type="text" name="">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="search-group">
+							<label>访问地址</label>
+							<input class="wd340" type="text" name="">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src='common/js/jquery-1.11.3.js'></script>
+<script type="text/javascript" src='common/js/common.js'></script>
+<script type="text/javascript" src="js/imgUploadPre.js"></script>
+<script type="text/javascript" src="js/jquery.Jcrop.js"></script>
+<script type="text/javascript" src="js/upPic.js"></script>
+</html>

@@ -1,0 +1,74 @@
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } 
+            }
+.loader{
+   z-index: 999;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   background-color: white;
+}
+  .ball-clip-rotate-multiple {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translateX(-50%) translateY(-50%);
+  	-webkit-transform: translateX(-50%) translateY(-50%);
+  	width: 2rem;
+  	height: 2rem;
+  }
+  .ball-clip-rotate-multiple > div {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 2px solid #0e052b;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    -webkit-animation: rotate 1s 0s ease-in-out infinite;
+    animation: rotate 1s 0s ease-in-out infinite; 
+}
+.ball-clip-rotate-multiple > div:last-child {
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    border-color: #0e052b transparent #0e052b transparent;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse; 
+}

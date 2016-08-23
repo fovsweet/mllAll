@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+	<title>个人中心</title>
+	<link rel="stylesheet" href="../src/assents/css/babelLoading.css">
+</head>
+<body style="padding:0;margin:0">
+
+	<!-- 加载loading start -->
+	<div class="loader">
+        <div class="ball-clip-rotate-multiple">
+          <div></div>
+          <div></div>
+        </div>
+    </div>
+    <!-- 加载loading end -->
+
+	<div id="app"></div>
+</body>
+	<script>
+		window.onload = function(){
+			var load = document.querySelector('.loader');
+			load.style.opacity = 0;
+			load.style.zIndex = -1;
+		}
+		var uuId="123";
+		var openId="234";
+		var lvDef = {
+			lvDefTitle: '家+美乐乐无甲醛活动安全共享你和他你和他',
+			lvDefDescWx: '“家+美乐乐”倡导全民健康家居生活，美乐乐推出新品健康系列家具。为了让每个人都能享受健康轻松的家庭生活。',
+			lvDefStartTime :'1468216314134',
+			lvDefEndTime:'1478226324134',
+			lvDefLocaOpen:'1',
+			lvDefLocaJson:{
+				'longitude':'113.959463',
+				 'latitude':'22.544805',
+				 'radius':'2'
+			},
+			lvDefLocaCcid:'',
+			lvDefDesc:'这是TM的活动介绍，请脑补，听说大家都喜欢数钱的感觉，这就让你数个够！在规定时间内以最快的速度数钱，获得钞票数可进入土豪榜PK，邀请好友数钱更欢乐！'
+		};
+        var lvDefReward = {
+        	lvDefRewName:'一座巨城',
+        	lvDefRewUrl:'../src/assents/images/liveevent/city.png'
+        };
+        var isFollow = 'Y';
+        var qrCodeUrl = '../src/assents/images/qrcode.png'
+	</script>
+	<script src="../src/assents/js/vue.min.js"></script>
+	<script src="../src/assents/js/zepto.min.js"></script>
+	<script src="../build/vuer.common.js"></script>
+	<script src="../build/joinUs.js"></script>
+</html>

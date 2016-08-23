@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户分析</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="common/css/common.css">
+</head>
+<style type="text/css">
+	.user_label_content .user_label_title{font-size:14px;font-weight:normal;margin-top:30px;color:#63a8eb}
+	.user_label_content .user_label_list{display:flex;flex-wrap:wrap;}
+	.user_label_content .user_label_list>div{width:220px;height:150px;display:inline-block;margin:20px 20px 0 0}
+	.user_label_content .user_label_list>div h2{font-size:13px;text-align:center;font-weight:bold;background:#ddd;color:#333;line-height:50px;color:#fff}
+	.user_label_content .user_label_list>div span{position:relative;display:inline-block;height:100px;width:220px;-webkit-box-sizing:border-box;border:1px solid #ddd;padding:30px;padding-left:40px;border-top:0}
+	.user_label_content .user_label_list>div span:before{content:"";display:inline-block;position:absolute;border:1px solid #666;left:30px;top:40px}
+</style>
+<body>
+<div id="header"></div>
+<div id='content'>
+	<div id='sidebar'></div>
+	<div id='section'>
+		<div class='container'>
+			<h2 class="page_header">用户分析</h2>
+			<div class="tab">
+		        <a href="#">整体画像</a>
+		        <a href="#">用户列表</a>
+		        <a href="#" class="active">用户标签</a>
+		    </div>
+		    <div class="user_label_content">
+		    	<h2 class="user_label_title">系统标签是O2O系统根据用户数据定义的基础标签，旨在为商家提供运营参考</h2>
+		    	<div class="user_label_list">
+		    		<div>
+		    			<h2 style="background-color:#a7e9f8">低活跃用户</h2>
+		    			<span>最近30天点击菜单次数在一定范围内</span>
+		    		</div>
+		    		<div>
+		    			<h2 style="background-color:#adf2e0">中活跃用户</h2>
+		    			<span>最近30天点击菜单次数在一定范围内</span>
+		    		</div>
+		    		<div>
+		    			<h2 style="background-color:#caeea3">高活跃用户</h2>
+		    			<span>最近30天点击菜单次数在一定范围内</span>
+		    		</div>
+		    		<div>
+		    			<h2 style="background-color:#fad8d0">促销敏感</h2>
+		    			<span>领券达到一定次数</span>
+		    		</div>
+		    		<div>
+		    			<h2 style="background-color:#dabbeb">意向用户</h2>
+		    			<span>激活次数达到一定次数</span>
+		    		</div>
+		    		<div>
+		    			<h2 style="background-color:#f9bba4">聊天达人</h2>
+		    			<span>聊天条数超过一定数值</span>
+		    		</div>
+		    		<div>
+		    			<h2 style="background-color:#fea9cf">喜欢分享</h2>
+		    			<span>分享次数超过一定数值</span>
+		    		</div>
+		    		<div>
+		    			<h2 style="background-color:#fa9ead">消费达人</h2>
+		    			<span>使用卡券超过一定数值</span>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src='common/js/jquery-1.11.3.js'></script>
+<script type="text/javascript" src='common/js/common.js'></script>
+</html>
